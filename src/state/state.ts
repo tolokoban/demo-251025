@@ -12,4 +12,13 @@ export default {
             return ["en", "fr", "it"].includes(lang) ? lang : "en"
         },
     }),
+    skybox: new AtomicState({
+        imageNegX: new Image(),
+        imageNegY: new Image(),
+        imageNegZ: new Image(),
+        imagePosX: new Image(),
+        imagePosY: new Image(),
+        imagePosZ: new Image(),
+    }),
+    scroll: new AtomicState(0),
 }

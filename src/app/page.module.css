@@ -1,8 +1,89 @@
-.main,
-.main > * {
+.main {
+    --size: 35vw;
+}
+
+@media (orientation: portrait) {
+    .main {
+        --size: calc(100vw - 2em);
+    }
+}
+
+.main {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    color: #fff;
+    font-size: max(3vmin, 12px);
+    text-shadow:
+        0 1px 2px #000,
+        0 -1px 2px #000,
+        1px 0 2px #000,
+        -1px 0 2px #000;
+
+    > canvas {
+        background: #000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    > div {
+        overflow: auto;
+        scroll-behavior: smooth;
+        padding: 1em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3em;
+
+        a,
+        a:visited {
+            color: #dfd;
+        }
+
+        > h1 {
+            position: static;
+            font: 500%;
+            text-align: center;
+            margin: 25vh 0;
+        }
+
+        > article {
+            position: static;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 1em;
+
+            h2 {
+                position: static;
+                font: 200%;
+            }
+
+            > div {
+                max-width: var(--size);
+                width: var(--size);
+                content: "";
+            }
+
+            &:nth-child(2n + 1) {
+                > div:first-child {
+                    order: 2;
+                }
+            }
+        }
+    }
 }
