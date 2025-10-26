@@ -2,22 +2,6 @@
     --size: 35vw;
 }
 
-@media (orientation: portrait) {
-    .main {
-        --size: calc(100vw - 2em);
-
-        > div {
-            > article {
-                &:nth-child(2n + 1) {
-                    > div:first-child {
-                        order: 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .main {
     position: absolute;
     left: 0;
@@ -95,9 +79,27 @@
                 max-width: var(--size);
                 width: var(--size);
                 content: "";
+
+                &.description {
+                    z-index: 9;
+                }
             }
 
             &:nth-child(2n + 1) {
+                > div:first-child {
+                    order: 2;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    .main {
+        --size: calc(100vw - 2em);
+
+        > div {
+            > article {
                 > div:first-child {
                     order: 2;
                 }

@@ -16,7 +16,7 @@ export default function Page() {
                 </h1>
                 {PLANETS.map(({ id, name, symb, desc, wiki, nasa }) => (
                     <article key={name}>
-                        <div>
+                        <div className={styles.description}>
                             <h2>
                                 <div>{name}</div>
                                 <div>{symb}</div>

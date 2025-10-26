@@ -17,13 +17,13 @@ export default function Planet({ className, name: map, nasa }: PlanetProps) {
                 .filter((cls) => typeof cls === "string")
                 .join(" ")}
         >
-            <canvas ref={painter.setCanvas}></canvas>
             <div>
                 Source{" "}
                 <a href={nasa} target="nasa">
                     NASA
                 </a>
             </div>
+            <canvas ref={painter.setCanvas}></canvas>
         </div>
     )
 }

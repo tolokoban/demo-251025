@@ -18,3 +18,9 @@
         text-align: center;
     }
 }
+
+@media (orientation: portrait) {
+    .planet {
+        top: calc(-0.5 * var(--size));
+    }
+}
