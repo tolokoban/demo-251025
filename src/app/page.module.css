@@ -71,6 +71,13 @@
             h2 {
                 position: static;
                 font: 200%;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1em;
+                width: 100%;
             }
 
             > div {
