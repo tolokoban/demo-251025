@@ -29,7 +29,21 @@ export class Painter {
                 })
             )
             this.updateTexture()
-            context.play()
+            context.paint()
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    const [entry] = entries
+                    if (entry.isIntersecting) {
+                        context.play()
+                    } else {
+                        context.pause()
+                    }
+                },
+                {
+                    threshold: 0.2,
+                }
+            )
+            observer.observe(canvas)
         }
     }
 

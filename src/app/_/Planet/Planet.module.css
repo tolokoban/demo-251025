@@ -1,5 +1,6 @@
 .planet {
     position: sticky;
+    top: calc(50vh - (0.5 * var(--size)));
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;

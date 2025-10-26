@@ -5,6 +5,16 @@
 @media (orientation: portrait) {
     .main {
         --size: calc(100vw - 2em);
+
+        > div {
+            > article {
+                &:nth-child(2n + 1) {
+                    > div:first-child {
+                        order: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -67,6 +77,7 @@
             justify-content: space-around;
             align-items: flex-start;
             gap: 1em;
+            margin-bottom: 50vh;
 
             h2 {
                 position: static;
