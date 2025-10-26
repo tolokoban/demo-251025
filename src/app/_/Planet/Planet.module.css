@@ -12,6 +12,7 @@
     > canvas {
         aspect-ratio: 1/1;
         background-color: #0000;
+        pointer-events: none;
     }
 
     > div {
